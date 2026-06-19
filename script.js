@@ -34,7 +34,7 @@ document.querySelector("#lead-form").addEventListener("submit",event=>{event.pre
 
 const translations={
 "Location":"Ubicación","Investment":"Inversión","Payment Plan":"Plan de pagos","Request Brochure":"Solicitar dossier","Check Availability":"Consultar disponibilidad","Conceptual imagery":"Imágenes conceptuales",
-"Own one of only 11 private pool villas near Mandalika Circuit":"Hazte con una de las únicas 11 villas con piscina privada cerca del circuito de Mandalika",
+"A private rhythm of life in South Lombok":"Un ritmo de vida privado en el sur de Lombok",
 "A limited boutique collection of 70 m² tropical villas in South Lombok, each with a private pool, designed for personal use, rental potential and long-term ownership.":"Una colección boutique limitada de villas tropicales de 70 m² en el sur de Lombok, cada una con piscina privada, pensadas para uso personal, potencial de alquiler y propiedad a largo plazo.",
 "11 Villas Only":"Solo 11 villas","70 m² Each":"70 m² cada una","Private Pool":"Piscina privada","From €120,000":"Desde 120.000 €","Near MotoGP Circuit":"Cerca del circuito de MotoGP",
 "Limited boutique supply":"Oferta boutique limitada","Personal use and rental potential":"Uso personal y potencial de alquiler","Full legal guidance before reservation":"Asesoramiento legal completo antes de reservar",
