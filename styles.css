@@ -83,3 +83,11 @@ body.menu-open{overflow:hidden}.nav-mobile-footer{display:none}@media(max-width:
  .header nav{margin-right:4px}
  .header .language-switch{margin-left:2px;min-width:48px;justify-content:center}
 }
+
+/* Keep the mobile overlay viewport-bound after header scroll state */
+@media(max-width:1050px){
+ .header.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none}
+ .header.open,.header.open.scrolled{height:72px;overflow:visible;transform:none;contain:none}
+ .header.open nav,.header.open.scrolled nav{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:100svh!important;margin:0!important;transform:none!important;overflow-y:auto!important;overscroll-behavior:contain}
+ .header.open.scrolled>.logo,.header.open.scrolled>.language-switch,.header.open.scrolled>.menu{color:#fff}
+}
