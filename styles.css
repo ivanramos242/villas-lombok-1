@@ -43,3 +43,7 @@ body.menu-open{overflow:hidden}.nav-mobile-footer{display:none}@media(max-width:
 .circuit-map img{object-fit:cover}
 .circuit-labels{z-index:2;background:var(--ink)}
 @media(max-width:700px){.circuit-stage{padding-bottom:0}.circuit-map{width:100%;height:auto;aspect-ratio:1920/1279;margin:60px auto}.circuit-labels{position:static}.circuit-labels span{padding:18px 0}}
+
+/* Mandalika location map scale */
+.destination-image{width:70%;justify-self:center}
+@media(max-width:700px){.destination-image{width:70%;height:auto;aspect-ratio:1535/1024}}
