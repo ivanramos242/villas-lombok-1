@@ -26,8 +26,11 @@ const faqDataEs=[
 function renderDynamic(lang){const data=lang==="es"?faqDataEs:faqDataEn;accordions.innerHTML=data.map((item,i)=>`<article class="accordion"><button aria-expanded="false"><b>${String(i+1).padStart(2,"0")}</b><span>${item[0]}</span><i>↘</i></button><p>${item[1]}</p></article>`).join("");accordions.querySelectorAll("button").forEach(button=>button.addEventListener("click",()=>{const item=button.parentElement;item.classList.toggle("open");button.setAttribute("aria-expanded",item.classList.contains("open"))}));document.querySelector("#units").innerHTML=Array.from({length:9},(_,i)=>`<div class="unit"><b>${String(i+1).padStart(2,"0")}</b><span>${lang==="es"?"Disponible próximamente":"Available soon"}</span></div>`).join("")}
 const header=document.querySelector("#header"),menu=document.querySelector(".menu");
 addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>30));
-menu.addEventListener("click",()=>{header.classList.toggle("open");menu.setAttribute("aria-expanded",header.classList.contains("open"))});
-document.querySelectorAll(".header nav a").forEach(a=>a.addEventListener("click",()=>header.classList.remove("open")));
+function setMenu(open){header.classList.toggle("open",open);document.body.classList.toggle("menu-open",open);menu.setAttribute("aria-expanded",open);menu.setAttribute("aria-label",open?"Close menu":"Open menu");if(open)setTimeout(()=>document.querySelector(".nav-links a").focus(),150)}
+menu.addEventListener("click",()=>setMenu(!header.classList.contains("open")));
+document.querySelectorAll(".header nav a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+addEventListener("keydown",event=>{if(event.key==="Escape")setMenu(false)});
+addEventListener("resize",()=>{if(innerWidth>1050)setMenu(false)});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.isIntersecting&&entry.target.classList.add("visible")),{threshold:.1});
 document.querySelectorAll(".reveal").forEach(element=>observer.observe(element));
 document.querySelector("#lead-form").addEventListener("submit",event=>{event.preventDefault();const button=event.currentTarget.querySelector("button");button.textContent="Thank you — enquiry received";button.disabled=true});
