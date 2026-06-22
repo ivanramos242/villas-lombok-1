@@ -74,3 +74,12 @@ body.menu-open{overflow:hidden}.nav-mobile-footer{display:none}@media(max-width:
  .header .language-switch{gap:5px}
  .header.open nav{padding-top:96px!important}
 }
+
+/* Desktop navigation spacing fix */
+@media(min-width:1051px){
+ .header .nav-links{display:flex!important;align-items:center;column-gap:0!important}
+ .header .nav-links>a{display:inline-flex!important;align-items:center;padding:12px 13px!important;margin:0!important;white-space:nowrap}
+ .header .nav-links>a+a{margin-left:2px!important}
+ .header nav{margin-right:4px}
+ .header .language-switch{margin-left:2px;min-width:48px;justify-content:center}
+}
