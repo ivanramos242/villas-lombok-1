@@ -47,3 +47,30 @@ body.menu-open{overflow:hidden}.nav-mobile-footer{display:none}@media(max-width:
 /* Mandalika location map scale */
 .destination-image{width:70%;justify-self:center}
 @media(max-width:700px){.destination-image{width:70%;height:auto;aspect-ratio:1535/1024}}
+
+/* Header and navigation hardening */
+.header{grid-template-columns:minmax(220px,1fr) auto auto auto;column-gap:clamp(18px,2.2vw,34px)}
+.header .nav-links{display:flex;align-items:center;gap:clamp(16px,2vw,30px)}
+.header nav{align-items:center}
+.header nav a{white-space:nowrap}
+.header-cta{min-height:48px;padding-inline:20px}
+.language-switch button:focus-visible,.menu:focus-visible,.header nav a:focus-visible,.header-cta:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+@media(max-width:1050px){
+ .header{grid-template-columns:minmax(0,1fr) auto auto;column-gap:14px}
+ .header>.logo,.header>.language-switch,.header>.menu{position:relative;z-index:62}
+ .header.open{background:transparent!important;border-color:transparent!important;backdrop-filter:none!important}
+ .header.open nav{z-index:60!important;display:flex!important;visibility:visible;opacity:1}
+ .header nav{visibility:hidden;opacity:0;transition:opacity .3s ease,visibility .3s ease}
+ .header.open .language-switch{color:#fff}
+ .header.open .logo{color:#fff}
+ .header.open .nav-links{align-items:flex-start;width:100%}
+ .header.open .nav-links a{width:100%;border-bottom:1px solid rgba(255,255,255,.12)}
+ .header.open .nav-links a:last-child{border-bottom:0}
+}
+@media(max-width:520px){
+ .header{padding-inline:18px}
+ .header .logo{font-size:.62rem;letter-spacing:.09em}
+ .header .logo span{flex:0 0 auto}
+ .header .language-switch{gap:5px}
+ .header.open nav{padding-top:96px!important}
+}
