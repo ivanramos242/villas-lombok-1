@@ -91,3 +91,7 @@ body.menu-open{overflow:hidden}.nav-mobile-footer{display:none}@media(max-width:
  .header.open nav,.header.open.scrolled nav{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:100svh!important;margin:0!important;transform:none!important;overflow-y:auto!important;overscroll-behavior:contain}
  .header.open.scrolled>.logo,.header.open.scrolled>.language-switch,.header.open.scrolled>.menu{color:#fff}
 }
+
+/* Show the Mandalika map in full without cropping labels */
+.destination-image{height:auto!important;aspect-ratio:1535/1024;clip-path:none!important;align-self:center;background:#f2eee5}
+.destination-image>img{object-fit:contain!important;object-position:center!important}
