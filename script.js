@@ -4,7 +4,7 @@ const faqDataEn=[
 ["Where is the project located?","The project is located in the Mandalika area of South Lombok, close to the international MotoGP circuit, beaches, restaurants and tourism infrastructure."],
 ["How many villas are available?","Only 9 private villas are planned."],
 ["What is included in each villa?","Each villa includes approximately 70 m² of built area, one bedroom, indoor-outdoor living, a private pool, terrace and tropical landscaping."],
-["What is the starting price?","Villas start from €120,000. Final pricing may vary depending on release phase, specifications and availability."],
+["What is the starting price?","Villas start from €115,000. Final pricing may vary depending on release phase, specifications and availability."],
 ["Can I rent out the villa?","The villas are designed for personal use and rental potential. Optional property management support will be available."],
 ["What is the payment plan?","The preliminary payment plan is 25% reservation deposit, 30% pre-construction, 35% during build progress and 10% at final handover."],
 ["Can I buy without travelling to Lombok?","Remote purchase support may be available through legal representatives and digital documentation, subject to legal process and buyer verification."],
@@ -17,7 +17,7 @@ const faqDataEs=[
 ["¿Dónde está ubicado el proyecto?","El proyecto está ubicado en la zona de Mandalika, en el sur de Lombok, cerca del circuito internacional de MotoGP, playas, restaurantes e infraestructura turística."],
 ["¿Cuántas villas hay disponibles?","Solo se proyectan 9 villas privadas."],
 ["¿Qué incluye cada villa?","Cada villa incluye aproximadamente 70 m² construidos, un dormitorio, espacios interiores y exteriores, piscina privada, terraza y paisajismo tropical."],
-["¿Cuál es el precio inicial?","Las villas parten de 120.000 €. El precio final puede variar según la fase de lanzamiento, las especificaciones y la disponibilidad."],
+["¿Cuál es el precio inicial?","Las villas parten de 115.000 €. El precio final puede variar según la fase de lanzamiento, las especificaciones y la disponibilidad."],
 ["¿Puedo alquilar la villa?","Las villas están diseñadas para uso personal y potencial de alquiler. Habrá disponible un servicio opcional de gestión de la propiedad."],
 ["¿Cuál es el plan de pagos?","El plan preliminar es un 25 % como depósito de reserva, un 30 % antes de la construcción, un 35 % durante el avance de obra y un 10 % en la entrega final."],
 ["¿Puedo comprar sin viajar a Lombok?","Puede haber asistencia para la compra remota mediante representantes legales y documentación digital, sujeta al proceso legal y la verificación del comprador."],
@@ -39,7 +39,7 @@ const translations={
 "Location":"Ubicación","Investment":"Inversión","Payment Plan":"Plan de pagos","Request Brochure":"Solicitar dossier","Check Availability":"Consultar disponibilidad","Conceptual imagery":"Imágenes conceptuales",
 "Invest in luxury villas in South Lombok":"Invierte en Villas de Lujo al Sur de Lombok",
 "A limited boutique collection of 70 m² tropical villas in South Lombok, each with a private pool, designed for personal use, rental potential and long-term ownership.":"Una colección boutique limitada de villas tropicales de 70 m² en el sur de Lombok, cada una con piscina privada, pensadas para uso personal, potencial de alquiler y propiedad a largo plazo.",
-"9 Villas Only":"Solo 9 villas","70 m² Each":"70 m² cada una","Private Pool":"Piscina privada","From €120,000":"Desde 120.000 €","Near MotoGP Circuit":"Cerca del circuito de MotoGP",
+"9 Villas Only":"Solo 9 villas","70 m² Each":"70 m² cada una","Private Pool":"Piscina privada","From €115,000":"Desde 115.000 €","Near MotoGP Circuit":"Cerca del circuito de MotoGP",
 "Limited boutique supply":"Oferta boutique limitada","Personal use and rental potential":"Uso personal y potencial de alquiler","Full legal guidance before reservation":"Asesoramiento legal completo antes de reservar",
 "Why Lombok":"Por qué Lombok","An early-stage island destination next to Bali":"Un destino insular emergente junto a Bali",
 "Lombok is emerging as one of Indonesia’s most compelling property and lifestyle destinations. Located next to Bali but still less saturated, the island offers a rare combination of natural beauty, improving infrastructure, international tourism appeal and a calmer, more authentic atmosphere.":"Lombok está emergiendo como uno de los destinos inmobiliarios y de estilo de vida más atractivos de Indonesia. Situada junto a Bali, pero todavía menos saturada, la isla combina belleza natural, infraestructuras en desarrollo, atractivo turístico internacional y un ambiente más tranquilo y auténtico.",
@@ -70,8 +70,8 @@ function setLanguage(lang){
  originalText.forEach((raw,node)=>{const key=raw.trim();node.nodeValue=lang==="es"&&translations[key]?raw.replace(key,translations[key]):raw});
  originalPlaceholders.forEach((raw,el)=>{const ph={"Your name":"Tu nombre","Country of residence":"País de residencia","Tell us what you would like to know":"Cuéntanos qué te gustaría saber"};el.placeholder=lang==="es"?(ph[raw]||raw):raw});
  document.documentElement.lang=lang;
- document.title=lang==="es"?"Mandalika Eleven Villas | Villas con piscina privada en Lombok desde 120.000 €":"Mandalika Eleven Villas | Private Pool Villas in Lombok from €120,000";
- document.querySelector('meta[name="description"]').content=lang==="es"?"Una colección limitada de 9 villas con piscina privada en Mandalika, Lombok, cerca del circuito internacional de MotoGP. Desde 120.000 €.":"A limited collection of 9 private pool villas in Mandalika, Lombok, near the international MotoGP circuit. Villas from €120,000.";
+ document.title=lang==="es"?"Mandalika Eleven Villas | Villas con piscina privada en Lombok desde 115.000 €":"Mandalika Eleven Villas | Private Pool Villas in Lombok from €115,000";
+ document.querySelector('meta[name="description"]').content=lang==="es"?"Una colección limitada de 9 villas con piscina privada en Mandalika, Lombok, cerca del circuito internacional de MotoGP. Desde 115.000 €.":"A limited collection of 9 private pool villas in Mandalika, Lombok, near the international MotoGP circuit. Villas from €115,000.";
  document.querySelectorAll(".language-switch button").forEach(button=>button.classList.toggle("active",button.dataset.lang===lang));
  renderDynamic(lang);
  localStorage.setItem("mandalika-lang",lang);
